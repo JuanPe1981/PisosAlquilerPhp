@@ -7,7 +7,7 @@
             <p class="lead mb-4">Puedes crear pisos y usuarios desde este panel.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="location.href='<?php echo URLSITE ?>?page=register_user'">Añadir Usuarios</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="location.href='<?php echo URLSITE ?>?page=creartema'">Añadir Casas</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="location.href='<?php echo URLSITE ?>?page=register_house'">Añadir Casas</button>
             </div>
         </div>
     </div>

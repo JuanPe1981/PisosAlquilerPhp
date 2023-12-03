@@ -21,6 +21,7 @@ switch ($page){
     case 'logout' :
         require "controllers/logout_controller.php";
         logout();
+
     case 'register_user' :
         require "views/register_user_view.php";
         break;
@@ -29,19 +30,18 @@ switch ($page){
         register_user_controler::validacion();
         break;
 
+    case 'register_house' :
+        require "views/register_house_view.php";
+        break;
+    case 'registerauth_house' :
+        require "controllers/register_house_controller.php";
+        register_house_controler::validacion();
+        break;
 
-
-
-
-
-
-
-
-
-
-
-
-
+    case 'vercasas';
+        require "controllers/houses_controller.php";
+        houses_controller::verhouses();
+        break;
 
 
 
@@ -57,10 +57,6 @@ switch ($page){
         require "controllers/tema_controller.php";
         tema_controller::registertema();
         require "views/login_view.php";
-        break;
-    case 'vertemas';
-        require "controllers/tema_controller.php";
-        tema_controller::vertemas();
         break;
     case 'deletetema';
         $idtema = $_GET['idtema'];
