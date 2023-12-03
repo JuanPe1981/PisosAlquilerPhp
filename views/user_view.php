@@ -5,21 +5,21 @@ require "views/layouts/header.php";
     <h1 class="text-center mt-5">Datos de usuario</h1>
     <div class="row justify-content-center">
         <div class = "col-sm-4 mt-5 mb-5 pd-2">
-            <form action="<?php echo URLSITE ?>/?page=registerauth_user" method="POST">
+            <form action="<?php echo URLSITE ?>/?page=modificarDatosUsuario&idUser=<?php echo $user['idUser']?>" method="POST">
                 <div class="form-group mb-1">
-                    <input type="text" class="form-control" name="txtusuario" readonly="readonly" placeholder="<?php echo $user['userName']?>">
+                    <input type="text" class="form-control" name="txtusuario" readonly="readonly" value="<?php echo $user['userName']?>">
                 </div>
                 <div class="form-group mb-1">
-                    <input type="text" class="form-control" name="txtnombre" readonly="readonly" placeholder="<?php echo $user['nameUser']?>">
+                    <input type="text" class="form-control" name="txtnombre" readonly="readonly" value="<?php echo $user['nameUser']?>">
                 </div>
                 <div class="form-group mb-1">
-                    <input type="text" class="form-control" name="txtapellido" readonly="readonly" placeholder="<?php echo $user['firstname']?>">
+                    <input type="text" class="form-control" name="txtapellido" readonly="readonly" value="<?php echo $user['firstname']?>">
                 </div>
                 <div class="form-group mb-1">
-                    <input type="text" class="form-control" name="txtdireccion" placeholder="<?php echo $user['addressUser']?>">
+                    <input type="text" class="form-control" name="txtdireccion" value="<?php echo $user['addressUser']?>">
                 </div>
                 <div class="form-group mb-5">
-                    <input type="text" class="form-control" name="txttelefono" placeholder="<?php echo $user['phoneNumber']?>">
+                    <input type="text" class="form-control" name="txttelefono" value="<?php echo $user['phoneNumber']?>">
                 </div>
 
                 <?php

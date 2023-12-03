@@ -75,50 +75,6 @@ switch ($page){
         user_controller::modificarDatosUser($idUser);
         break;
 
-
-
-
-
-
-
-
-
-    case 'creartema':
-        if (isset($_SESSION['login']) == null) {
-            require "views/nologeado_view.php";
-            break;
-        } elseif (isset($_SESSION['login'])) {
-            require "views/newTema_view.php";
-            break;
-        }
-    case 'creartemabd':
-        require "controllers/tema_controller.php";
-        tema_controller::registertema();
-        require "views/login_view.php";
-        break;
-
-
-
-
-    case 'crearmensaje':
-        $idtema = $_GET['idtema'];
-        require "controllers/mensajes_controller.php";
-        mensajes_controller::registermensaje($idtema);
-        break;
-    case 'deletemensaje';
-        $idmensaje = $_GET['idmensaje'];
-        $idtema = $_GET['idtema'];
-        require "controllers/mensajes_controller.php";
-        mensajes_controller::deletemensaje($idmensaje, $idtema);
-        break;
-    case 'modificarmensaje';
-        $idmensaje = $_GET['idmensaje'];
-        $idtema = $_GET['idtema'];
-        require "controllers/mensajes_controller.php";
-        mensajes_controller::modificarmensaje($idmensaje, $idtema);
-        break;
-
-
     default:
         'login';
         //default : echo "<a href='" . URLSITE ."/?page=menu'>LOGIN</a>";
