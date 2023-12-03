@@ -63,6 +63,21 @@ switch ($page){
         users_controller::verusuario($idUsuario);
         break;
 
+    case 'modificarPropietarioInquilino';
+        $idHouse = $_GET['idHouse'];
+        require "controllers/house_controller.php";
+        house_controller::modificarPropietarioInquilino($idHouse);
+        break;
+
+    case 'modificarDatosUsuario';
+        $idUser = $_GET['idUser'];
+        require "controllers/user_controller.php";
+        user_controller::modificarDatosUser($idUser);
+        break;
+
+
+
+
 
 
 
@@ -82,11 +97,7 @@ switch ($page){
         require "views/login_view.php";
         break;
 
-    case 'modificartitulotema';
-        $idtema = $_GET['idtema'];
-        require "controllers/tema_controller.php";
-        tema_controller::modificartitulo($idtema);
-        break;
+
 
 
     case 'crearmensaje':
