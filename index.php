@@ -38,10 +38,15 @@ switch ($page){
         register_house_controler::validacion();
         break;
 
-    case 'vercasas';
+    case 'ver_casas';
         require "controllers/houses_controller.php";
-        houses_controller::verhouses();
+        houses_controller::vercasas();
         break;
+
+
+
+
+
 
 
 

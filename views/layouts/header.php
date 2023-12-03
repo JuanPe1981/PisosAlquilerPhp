@@ -24,6 +24,12 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="<?php echo URLSITE ?>?page=menu">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?php echo URLSITE ?>?page=ver_usuarios">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?php echo URLSITE ?>?page=ver_casas">Casas</a>
+                        </li>
                         <?php
                     }
                     ?>
