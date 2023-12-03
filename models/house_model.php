@@ -1,16 +1,17 @@
 <?php
 
-class user_model {
-    public function modificarDatosUsuario ($idUser, $direccion_modify, $telefono_modify){
+class house_model {
+    public function modificarPropietarioInquilino ($idHouse, $user_agency_modify, $user_proprietary_modify, $user_renter_modify){
 
-        $urlPatchUserData = BASE_URL."user/data/".$idUser;
+        $urlPatchUsersHouse = BASE_URL."house/".$idHouse;
 
         $dataChange = array(
-            'addressUser' => $direccion_modify,
-            'phoneNumber' => $telefono_modify
+            'userAgencyId' => $user_agency_modify,
+            'userProprietaryId' => $user_proprietary_modify,
+            'userRenterId' => $user_renter_modify
         );
 
-        $ch = curl_init($urlPatchUserData);
+        $ch = curl_init($urlPatchUsersHouse);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PATCH');
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($dataChange));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
