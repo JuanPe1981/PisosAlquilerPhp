@@ -42,8 +42,26 @@ switch ($page){
         require "controllers/houses_controller.php";
         houses_controller::vercasas();
         break;
+    case 'deletecasa';
+        $idHouse = $_GET['idHouse'];
+        require "controllers/houses_controller.php";
+        houses_controller::deletehouse($idHouse);
+        break;
+    case 'vercasa':
+        $idHouse = $_GET['idHouse'];
+        require "controllers/houses_controller.php";
+        houses_controller::vercasa($idHouse);
+        break;
 
-
+    case 'ver_usuarios';
+        require "controllers/users_controller.php";
+        users_controller::verusuarios();
+        break;
+    case 'verusuario':
+        $idUsuario = $_GET['idUser'];
+        require "controllers/users_controller.php";
+        users_controller::verusuario($idUsuario);
+        break;
 
 
 
@@ -63,22 +81,14 @@ switch ($page){
         tema_controller::registertema();
         require "views/login_view.php";
         break;
-    case 'deletetema';
-        $idtema = $_GET['idtema'];
-        require "controllers/tema_controller.php";
-        tema_controller::deletetema($idtema);
-        break;
+
     case 'modificartitulotema';
         $idtema = $_GET['idtema'];
         require "controllers/tema_controller.php";
         tema_controller::modificartitulo($idtema);
         break;
 
-    case 'vermensajes':
-        $idtema = $_GET['idtema'];
-        require "controllers/mensajes_controller.php";
-        mensajes_controller::vermensajes($idtema);
-        break;
+
     case 'crearmensaje':
         $idtema = $_GET['idtema'];
         require "controllers/mensajes_controller.php";
