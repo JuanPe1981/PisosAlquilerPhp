@@ -12,10 +12,16 @@ class register_user_controler {
         $_telefono = $telefono;
         $_admin = $admin;
 
+        $_resultado = $_modelo->register($_usuario,$_password,$_nombre,$_apellido,$_direccion,$_telefono, $_admin);
 
-        $_modelo->register($_usuario,$_password,$_nombre,$_apellido,$_direccion,$_telefono, $_admin);
-        $registroCorrecto = "Usuario registrado correctamente";
-        header('location:' . URLSITE . "/?page=register_user&registrado=" . $registroCorrecto);
+        if ($_resultado == true) {
+            $registroCorrecto = "Usuario registrado correctamente";
+            header('location:' . URLSITE . "/?page=register_user&registrado=" . $registroCorrecto);
+        } else {
+            $registroError = "Usuario no ha podido registrarse";
+            header('location:' . URLSITE . "/?page=register_user&registrado=" . $registroError);
+        }
+
     }
 
     public static function validacion(){
@@ -59,7 +65,7 @@ class register_user_controler {
 
 
         $_resultado = $modelo->comprobarUsuario($usuario);
-        if ($_resultado == false){
+        if ($_resultado == true){
             $errores[$i] = "El usuario ya existe intentalo con otro nombre de usuario";
             $i = $i+1;
         }

@@ -21,6 +21,8 @@ class register_user_model {
 
         curl_close($ch);
 
+        return $respuesta;
+
     }
 
     public function comprobarUsuario ($usuario) {

@@ -18,9 +18,10 @@ switch ($page){
         require "controllers/login_controller.php";
         login_controller::login();
         break;
-    case 'logout' :
+    case 'logout':
         require "controllers/logout_controller.php";
         logout();
+        break;
 
     case 'register_user' :
         require "views/register_user_view.php";
@@ -77,6 +78,6 @@ switch ($page){
 
     default:
         'login';
-        //default : echo "<a href='" . URLSITE ."/?page=menu'>LOGIN</a>";
+        //default : echo "<a href='" . URLSITE ."/?page=login'>LOGIN</a>";
         break;
 }
