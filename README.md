@@ -1,6 +1,7 @@
 # PisosAlquilerPhp
-Aplicación de escritorio para gestión de usuarios de Pisos de Alquiler
+Aplicación de escritorio para gestión de usuarios los usuarios y casas de los pisos en alquiler.
 
+Esta aplicación en PhP, permite al administrador poder añadir, modificar, ver los listados y el detalle tanto de los usuarios como de las casas.
 
 Login:
 ![Imagen del login](https://i.ibb.co/CmM2MTD/loginPhP.png)
