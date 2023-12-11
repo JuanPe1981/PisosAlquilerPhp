@@ -64,8 +64,8 @@ class register_user_controler {
         }
 
 
-        $_resultado = $modelo->comprobarUsuario($usuario);
-        if ($_resultado == true){
+        $result = $modelo->comprobarUsuario($usuario);
+        if ($result['userName'] == $usuario){
             $errores[$i] = "El usuario ya existe intentalo con otro nombre de usuario";
             $i = $i+1;
         }

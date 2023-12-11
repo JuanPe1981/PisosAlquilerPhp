@@ -27,7 +27,7 @@ class register_user_model {
 
     public function comprobarUsuario ($usuario) {
 
-        $urlComprobarUsuario = BASE_URL.BASE_URL.'user/login/'.$usuario;
+        $urlComprobarUsuario = BASE_URL.'user/login/'.$usuario;
         $ch = curl_init($urlComprobarUsuario);
         curl_setopt($ch, CURLOPT_URL, $urlComprobarUsuario);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -35,6 +35,9 @@ class register_user_model {
         curl_close($ch);
 
         $user = json_decode($result, true);
+//
+//        echo "<script> cosole.log($result)</script>";
+//        echo "<script> cosole.log($user)</script>";
 
         return $user;
     }

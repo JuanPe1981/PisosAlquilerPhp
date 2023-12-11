@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group mb-3 pb-1 pt-1 ps-5 pe-5">
                             <h5>Inquilino</h5>
-                            <p class="card-text pb-1 pt-1 ps-5 pe-5"><?php echo $house['userRenter']['nameUser']?> <?php echo $house['userRenter']['firstname']?></p>
+                            <p class="card-text"><?php echo $house['userRenter']['nameUser']?> <?php echo $house['userRenter']['firstname']?></p>
                             <input type="number" class="form-control pb-1 pt-1 ps-5 pe-5 text-center" name="txtinquilino" value="<?php echo $house['userRenter']['idUser']?>">
                             <a href="<?php echo URLSITE?>/?page=verusuario&idUser=<?php echo $house['userRenter']['idUser']?>" class="btn btn-primary">DETALLE</a>
                         </div>

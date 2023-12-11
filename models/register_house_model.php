@@ -26,7 +26,7 @@ class register_house_model {
 
     public function comprobarUsuario ($usuario) {
 
-        $urlComprobarUsuario = BASE_URL.BASE_URL.'user/'.$usuario;
+        $urlComprobarUsuario = BASE_URL. 'user/' . $usuario;
         $ch = curl_init($urlComprobarUsuario);
         curl_setopt($ch, CURLOPT_URL, $urlComprobarUsuario);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

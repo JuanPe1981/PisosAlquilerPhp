@@ -62,19 +62,19 @@ class register_house_controler {
 
 
         $_resultadoAgencia = $modelo->comprobarUsuario($agencia);
-        if ($_resultadoAgencia == false){
+        if ($_resultadoAgencia['code'] === 404){
             $errores[$i] = "El usuario agencia no existe";
             $i = $i+1;
         }
 
         $_resultadoPropietario = $modelo->comprobarUsuario($propietario);
-        if ($_resultadoPropietario == false){
+        if ($_resultadoPropietario['code'] === 404){
             $errores[$i] = "El usuario propietario no existe";
             $i = $i+1;
         }
 
         $_resultadoInquilino = $modelo->comprobarUsuario($inquilino);
-        if ($_resultadoInquilino == false){
+        if ($_resultadoInquilino['code'] === 404){
             $errores[$i] = "El usuario inquilino no existe";
             $i = $i+1;
         }
